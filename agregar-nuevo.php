@@ -48,14 +48,14 @@ select{margin-top: 15px;}
     <div>
     <div class="row">
         <div class="col s12 m12 l12">
-        <h4 align="center">Pasantías <?php echo date('Y');?></h4>
+        <h4 align="center">Proyectos PGRD <?php echo date('Y');?></h4>
         </div>
     </div>
         <div class="row" >
               <div class="input-field col s12  m12 l6">
               <div class="card">
                 <div class="card-content">
-                <span class="card-title">Agregar Nueva </span>
+                <span class="card-title">Agregar nuevo Proyecto </span>
                      <form method="POST" action="includes/new/nuevaPasantia.php" enctype="multipart/form-data" >
                         <div id="paisList"></div>
 
