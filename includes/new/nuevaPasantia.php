@@ -72,9 +72,7 @@ if ($areatematica_id==2) {
 			echo "Cultivos ingresados correctamente";
 		}
 	}else{echo "pasantia existe";}
-
 }
-
 	function datos_pais($pais_id){
 		//INICIO obtener Pais basados en su ID
 		GLOBAL $mysqli;
@@ -90,9 +88,7 @@ if ($areatematica_id==2) {
 			echo $mysqli->error;
 		}
 		//FIN obtener Pais basados en su ID
-
 	}
-
 	function archivo($documento){
 		$nombre = $_FILES['archivo']['name'];
 		$tipo = $_FILES['archivo']['type'];
@@ -138,21 +134,16 @@ if ($areatematica_id==2) {
 		var_dump($hola->fetch_assoc());
 		return $mysqli->query($selectPaisRb);
 	}
-
 	function insertPaisRubr($pais_id,$rubro_id){
 		GLOBAL $mysqli;
 		$intermediPaisRb= "INSERT INTO `pst-inter-pais-rubro`(`pais-id`, `rubro-id`) VALUES ('".$pais_id."','".$rubro_id."')";
 		return $mysqli->query($intermediPaisRb);
 	}
-
-
-
 	function insertPasantia($pais_id,$empresa_id,$date,$documento){
 		GLOBAL $mysqli;
 		$pasantiaquery= "INSERT INTO `pst-pasantia`(`pst-id`, `pst-pais-id`, `pst-emp-id`, `pst-anio`, `pst-doc-id`) VALUES ('','".$pais_id."','".$empresa_id."','".$date."','".$documento."')";
 		return $mysqli->query($pasantiaquery);
 	}
-
 	function selectPasantia($documento){
 		GLOBAL $mysqli;
 		$selectPasantia = "SELECT * FROM `pst-pasantia` WHERE `pst-doc-id` LIKE '%".$documento."%'";
@@ -160,7 +151,6 @@ if ($areatematica_id==2) {
 		var_dump($hola->fetch_assoc());
 		return $mysqli -> query($selectPasantia);
 	}
-
 	function insertDetalle($rubro_id){
 		GLOBAL $mysqli;
 		$resultado = $mysqli->query("SELECT MAX(`pst-id`) AS id FROM `pst-pasantia`");
@@ -172,7 +162,6 @@ if ($areatematica_id==2) {
 
 		return $mysqli->query($detallequery);
 	}
-
 function insertCultivos($value){
 	GLOBAL $mysqli;
 	GLOBAL $pais_id;
