@@ -7,7 +7,7 @@
 		<div>
 			<div class="row">
 				<div class="col s12 m12 l12">
-					<h4 align="center">PGRD <?php echo date('Y'); ?></h4>
+					<h4 align="center">Capacitación y planificación territorial</br> para la Gestión de Riesgos. <?php echo date('Y'); ?></h3>
 				</div>
 			</div>
 			<div class="input-field col s12  m12 l6">

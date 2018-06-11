@@ -66,7 +66,7 @@
         }
         img {
             width:100%;
-            max-width:1000px;
+            max-width:1200px;
         }
         .imgfooter {
             width:100%;
