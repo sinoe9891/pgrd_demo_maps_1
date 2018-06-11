@@ -9,21 +9,21 @@
 	</head>
 
 <?php
-	
+
 	require ('conexion.php');
-	
-	echo 'Selecciona País : <select onChange="getMunicipio(this.value);" name="cbx_pais" id="cbx_pais">';
-	
+
+	echo 'Seleccione un Proyecto : <select onChange="getMunicipio(this.value);" name="cbx_pais" id="cbx_pais">';
+
 	$query = "SELECT id_pais, pais FROM pais_pasantias ORDER BY pais";
-	
+
 	if($resultado=$mysqli->query($query))
 	{
 		while($row = $resultado->fetch_assoc())
 		{
 		?>
-		<option value="" disabled selected hidden>Seleccione un País</option>
+		<option value="" disabled selected hidden>Seleccione un Proyecto</option>
 		<option value="<?php echo $row['id_pais']; ?>"><?php echo $row['pais']; ?></option>
-		
+
 		<?php
 		}
 	}
