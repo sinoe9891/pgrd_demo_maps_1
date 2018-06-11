@@ -42,6 +42,9 @@ if ($id_areaTematica==1) {
 		<?php
 			}
 			?>
+
+
+
 		<?php
 	}
 }elseif ($id_areaTematica==2){
@@ -49,10 +52,15 @@ if ($id_areaTematica==1) {
 	///     pst-id   pais-nom   rb-at   rb-nom   rd-dsc   emp-nom
 	$query =  "select `pst-pasantia`.`pst-doc-id`, `pst-pais`.`pais-nom`, `pst-rubro`.`rb-at`, `pst-rubro`.`rb-nom`, `pst-rubro`.`rd-dsc`, `pst-empresa`.`emp-nom` from `pst-pasantia` inner join `pst-detalle` inner join `pst-rubro` inner join `pst-inter-rb-emp`inner join `pst-empresa` inner join `pst-inter-emp-pais` INNER JOIN `pst-pais` where `pst-pasantia`.`pst-id` = `pst-detalle`.`id-pst` AND `pst-inter-rb-emp`.`id-emp`=`pst-empresa`.`emp-id` AND `pst-detalle`.`id-rb`= `pst-rubro`.`rb-id` AND `pst-rubro`.`rb-id` = `pst-inter-rb-emp`.`id-rb` AND `pst-pasantia`.`pst-pais-id` = `pst-inter-emp-pais`.`emp-pais-id` and `pst-empresa`.`emp-id` = `pst-inter-emp-pais`.`emp-id` and `pst-pasantia`.`pst-emp-id`=`pst-empresa`.`emp-id` and `pst-pasantia`.`pst-pais-id` = ".$_GET['paisId']." and `pst-detalle`.`id-rb` = ".$_GET['rubroId']." and `pst-pais`.`pais-id` = `pst-pasantia`.`pst-pais-id`";
 
+
+
 	if($resultado=$mysqli->query($query))
 	{
+
 		?>
+
 		<h4>Pasantías Disponibles</h4>
+
 			<?php
 			while($row = $resultado->fetch_assoc())
 			{
@@ -65,7 +73,8 @@ if ($id_areaTematica==1) {
 				<p>Área Temática: <?php  if($row['rb-at']==1){echo 'Fitotecnia';}elseif($row['rb-at']==2){echo "Zootecnia";}?></p>
 				<p>Rubro: <?php echo $row['rb-nom']." (". $row['rd-dsc'].")" ; ?></p>
 				<p>Empresa: <?php echo $row['emp-nom']; ?></p>
-				<p>Mapa:</p></br><img src="docs/<?php echo $row['pst-doc-id']; ?>.jpg" width="800">
+				<p>Mapa:</p></br><img src="docs/<?php echo $row['pst-doc-id']; ?>.jpg" width="900">
+
             </div>
             <div class="card-action">
 	            <a class="waves-effect waves-light btn btn-large ripple-effect" target="_blank" style="background-color:#e8ac35" href="docs/<?php echo $row['pst-doc-id']; ?>.pdf"><i class="material-icons right">library_books</i>Información de Pasantía</a>

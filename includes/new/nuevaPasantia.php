@@ -9,20 +9,20 @@
 	$rubro_id = $_POST['new_rubro'];
 	$date = date("Y");
 	$documento = '';
-//INICIO Area tematica 2 = Zootecnia
+//INICIO Area tematica 2 = Zootecnia	
 if ($areatematica_id==2) {
 	$datos_pais=datos_pais($pais_id);
- 	//INICIO Crear nombre documento
-	$documento = ''.$datos_pais.''.$date.''.$pais_id.''.$empresa_id.''.$rubro_id.''.$areatematica_id;
-
+ 	//INICIO Crear nombre documento	
+	$documento = ''.$datos_pais.''.$date.''.$pais_id.''.$empresa_id.''.$rubro_id.''.$areatematica_id;	
+	
 					//INICIO Crear pasantías
 
 	if (mysqli_num_rows(selectPasantia($documento))==0) {
 
 		if (mysqli_num_rows(selectRubrEmp($rubro_id,$empresa_id))==0) {if (insertRubrEmp($rubro_id,$empresa_id)) {echo "ok";}else{echo "ERROR: insertRubrEmp ". $mysqli->error ;}}else{ echo "YA EXISTE: selectRubrEmp";}
-
+		 
 		if (mysqli_num_rows(selectPaisRubr($pais_id,$rubro_id))==0) {if (insertPaisRubr($pais_id,$rubro_id)) {echo "ok";}else{echo "ERROR: insertPaisRubr ". $mysqli->error;}}else{echo "YA EXISTE: selectPaisRubr";}
-
+			
 		if (insertPasantia($pais_id,$empresa_id,$date,$documento)) {echo "ok";}else{echo "ERROR: insertPasantia ". $mysqli->error;}
 
 		if (insertDetalle($rubro_id)) {echo "ok";}else{echo "ERROR: insertDetalle ". $mysqli->error;}
@@ -32,8 +32,8 @@ if ($areatematica_id==2) {
 		}
 
 	}else{echo "pasantia existe";}
-
-//FIN Area tematica 2 = Zootecnia
+			
+//FIN Area tematica 2 = Zootecnia	
 
 //INICIO Area tematica 1 = Fitotecnia
 
@@ -44,23 +44,23 @@ if ($areatematica_id==2) {
 	//FIN obtener Pais basados en su ID
 
 	//INICIO Manejo de cultivos al ingresarlos
-	for ($i=0; $i < $_POST['cont']; $i++) {
+	for ($i=0; $i < $_POST['cont']; $i++) { 
 		if(isset($_POST["cultivo".$i.""])){$cultivos[$i] = $_POST["cultivo".$i.""];}
 	 }
-	//FIN Manejo de cultivos al ingresarlos
+	//FIN Manejo de cultivos al ingresarlos 
 
 /*foreach ($cultivos as $id => $value) {
 	echo "{$id} => {$value} </br>";
-
+	
 }*/
-  	//INICIO Crear nombre documento
-	$documento = ''.$datos_pais.''.$date.''.$pais_id.''.$empresa_id.''.$rubro_id.''.$areatematica_id.''.$_POST['cont'];
+  	//INICIO Crear nombre documento			
+	$documento = ''.$datos_pais.''.$date.''.$pais_id.''.$empresa_id.''.$rubro_id.''.$areatematica_id.''.$_POST['cont'];	
 
 	if (mysqli_num_rows(selectPasantia($documento))==0)  {
 		if (mysqli_num_rows(selectRubrEmp($rubro_id,$empresa_id))==0) {if (insertRubrEmp($rubro_id,$empresa_id)) {echo "ok";}else{echo "ERROR: insertRubrEmp ". $mysqli->error ;}}else{ echo "YA EXISTE: selectRubrEmp";}
-
+		 
 		if (mysqli_num_rows(selectPaisRubr($pais_id,$rubro_id))==0) {if (insertPaisRubr($pais_id,$rubro_id)) {echo "ok";}else{echo "ERROR: insertPaisRubr ". $mysqli->error;}}else{echo "YA EXISTE: selectPaisRubr";}
-
+			
 		if (insertPasantia($pais_id,$empresa_id,$date,$documento)) {echo "ok";}else{echo "ERROR: insertPasantia ". $mysqli->error;}
 
 		if (insertDetalle($rubro_id)) {echo "ok";}else{echo "ERROR: insertDetalle ". $mysqli->error;}
@@ -71,7 +71,7 @@ if ($areatematica_id==2) {
 		if (insertCultivos($cultivos)) {
 			echo "Cultivos ingresados correctamente";
 		}
-	}else{echo "pasantia existe";}
+	}else{echo "pasantia existe";} 	
 
 }
 
@@ -86,7 +86,7 @@ if ($areatematica_id==2) {
 			$pais_dsc = $row['pais-dsc'];
 			}
 		return $pais_dsc;
-		}else{
+		}else{ 
 			echo $mysqli->error;
 		}
 		//FIN obtener Pais basados en su ID
@@ -98,10 +98,10 @@ if ($areatematica_id==2) {
 		$tipo = $_FILES['archivo']['type'];
 		$tamanio = $_FILES['archivo']['size'];
 		$ruta = $_FILES['archivo']['tmp_name'];
-		$destino = "../../docs/".$documento.".jpg";
+		$destino = "../../docs/".$documento.".pdf";
 		$errors = "";
-		if ($tipo=="application/jpg") {
-		echo "jpg";
+		if ($tipo=="application/pdf") {
+		echo "pdf";
 			if ($tamanio<500000) {
 			echo "ACEPTADO: menos de 500kb";
 			    if(!copy($ruta, $destino))
@@ -113,7 +113,7 @@ if ($areatematica_id==2) {
 					return TRUE;
 				}
 			}else{echo "no es del tamaño";}
-		}else{echo "no es jpg";}
+		}else{echo "no es pdf";}
 	}
 
 	function selectRubrEmp($rubro_id,$empresa_id){
@@ -137,7 +137,7 @@ if ($areatematica_id==2) {
 		$hola=$mysqli -> query($selectPaisRb);
 		var_dump($hola->fetch_assoc());
 		return $mysqli->query($selectPaisRb);
-	}
+	}	
 
 	function insertPaisRubr($pais_id,$rubro_id){
 		GLOBAL $mysqli;
@@ -145,7 +145,7 @@ if ($areatematica_id==2) {
 		return $mysqli->query($intermediPaisRb);
 	}
 
-
+	
 
 	function insertPasantia($pais_id,$empresa_id,$date,$documento){
 		GLOBAL $mysqli;
@@ -164,7 +164,7 @@ if ($areatematica_id==2) {
 	function insertDetalle($rubro_id){
 		GLOBAL $mysqli;
 		$resultado = $mysqli->query("SELECT MAX(`pst-id`) AS id FROM `pst-pasantia`");
-
+		
 		while($row = $resultado->fetch_assoc())
 		{	$pst_id = $row['id'];	}
 
@@ -176,7 +176,7 @@ if ($areatematica_id==2) {
 function insertCultivos($value){
 	GLOBAL $mysqli;
 	GLOBAL $pais_id;
-	GLOBAL $empresa_id;
+	GLOBAL $empresa_id; 
 	GLOBAL $rubro_id;
 	var_dump($value);
 	foreach ($value as $key => $value){
@@ -188,7 +188,7 @@ function insertCultivos($value){
 			}else{echo  "cultivo ".$value." NO Ingresado Correctamente  ".$mysqli->error;}
 		}else{echo "Cultivo existe";}
 	}
-
+		
 	}
 
 
