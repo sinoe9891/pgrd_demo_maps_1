@@ -15,10 +15,10 @@ if (isset($_POST['subir'])) {
     print_r($_FILES);
 
     if ($tipo=="application/pdf") {
-    echo "pdf";
+    echo "jpg";
     if ($tamanio<500000) {
     echo "menos a 500kb";
-        //copy($ruta, $destino);    
+        //copy($ruta, $destino);
 }
     }
 
@@ -56,7 +56,7 @@ if (isset($_POST['subir'])) {
                         <td><a href="lista.php">lista</a></td>
                     </tr>
                 </table>
-            </form>            
+            </form>
         </div>
     </body>
 </html>

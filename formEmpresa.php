@@ -27,7 +27,7 @@ if( !isset( $_SESSION['uid'] ) )
   }
 
   footer.page-footer {
-    
+
     background-color: #931919;
 }
 nav {
@@ -58,36 +58,36 @@ nav {
   </nav>
 
 
-    
+
 
   <main class="container">
     <div>
     <div class="row">
-    
+
       <div class="col s12 m12 l12"> <h4 align="center">Búsqueda de Pasantías </br><?php echo date('Y'); ?></h4> </div>
     </div>
-        
+
 	<div>
 		<h4>Datos de Nueva Empresa</h4>
 		<p>Esta empresa esta ubicada en: <strong><?php echo $_GET["pais_name"] ;?></strong></p>
         <form method="POST" action="includes/new/nuevaEmpresa.php">
-            <input type="text" hidden name="pais_id" value="<?php echo $_GET['pais_id'] ;?>">  
-        		<input type="text" placeholder="Nombre de la empresa" name="empresa-nom" required>	
+            <input type="text" hidden name="pais_id" value="<?php echo $_GET['pais_id'] ;?>">
+        		<input type="text" placeholder="Nombre de la empresa" name="empresa-nom" required>
         		<input type="submit" value="Agregar Empresa"  >
         </form>
 		<div id="nuevaEmpresaDatos"></div>
 		</div>
 
 
-       </div>  
-        
-       <div class="row">
-           
-       </div>  
+       </div>
 
-  
-        
-         
+       <div class="row">
+
+       </div>
+
+
+
+
       </div>
                
   </main>
@@ -101,27 +101,23 @@ nav {
                 <p class="grey-text text-lighten-4">Comprometidos a Alimentar el Mundo</p></a>
               </div>
               <div class="col l4 offset-l2 s12">
-               
-                
+
+
               </div>
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
             © 2016 Copyright CPA, Universidad Zamorano.
-           
+
             </div>
           </div>
-        </footer> 
+        </footer>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
          <script type="text/javascript" src="css/materialize/js/materialize.min.js" ></script>
-  
+
 
 
 	</body>
 </html>
-
-
-
-

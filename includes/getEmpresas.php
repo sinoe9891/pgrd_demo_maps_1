@@ -29,7 +29,7 @@ if ($id_areaTematica==1) {
 				<p>Rubro: <?php echo $row['rb-nom']." (". $row['rd-dsc'].")" ; ?></p>
 				<p>Cultivo: <?php echo $row['ctv-nom']; ?></p>
 				<p>Empresa: <?php echo $row['emp-nom']; ?></p>
-				<p>Mapa:</p></br><img src="img/<?php echo $row['pst-doc-id']; ?>.jpg" width="900">
+				<p>Mapa:</p></br><img src="docs/<?php echo $row['pst-doc-id']; ?>.jpg" width="900">
 
             </div>
             <div class="card-action">
@@ -65,7 +65,7 @@ if ($id_areaTematica==1) {
 				<p>Área Temática: <?php  if($row['rb-at']==1){echo 'Fitotecnia';}elseif($row['rb-at']==2){echo "Zootecnia";}?></p>
 				<p>Rubro: <?php echo $row['rb-nom']." (". $row['rd-dsc'].")" ; ?></p>
 				<p>Empresa: <?php echo $row['emp-nom']; ?></p>
-				<p>Mapa:</p></br><img src="img/<?php echo $row['pst-doc-id']; ?>.jpg" width="800">
+				<p>Mapa:</p></br><img src="docs/<?php echo $row['pst-doc-id']; ?>.jpg" width="800">
             </div>
             <div class="card-action">
 	            <a class="waves-effect waves-light btn btn-large ripple-effect" target="_blank" style="background-color:#e8ac35" href="docs/<?php echo $row['pst-doc-id']; ?>.pdf"><i class="material-icons right">library_books</i>Información de Pasantía</a>

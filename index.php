@@ -1,53 +1,6 @@
 <?php   session_start();?>
 <html>
-	<head>
-		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		    <title>Pasantías | Universidad Zamorano</title>
-		    <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
-        <link rel="stylesheet" type="text/css" href="css/materialize/css/materialize.min.css">
-          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-        <script src="includes/js.js" charset="utf-8"></script>
-        <style type="text/css">
-            body {
-                  display: flex;
-                  min-height: 100vh;
-                  flex-direction: column;
-                }
-
-                main {
-                  flex: 1 0 auto;
-                }
-
-                footer.page-footer {
-
-                  background-color: #931919;
-                }
-                nav {
-                  background-color: #008341;
-                }
-								img {
-										width:100%;
-										max-width:1000px;
-								}
-								.imgfooter {
-										width:100%;
-										max-width:213px;
-										display:block;
-										margin:auto;
-								}
-
-								.aligncenter img {
-										 display: center;
-								 }
-								 .image_frame .image_wrapper img, {
-										 transition: all .3s ease-in-out;
-								 }
-
-        </style>
-
-		<!--  <link rel="stylesheet" href="css/style.css">-->
-	</head>
+	<?php require_once('includes/header.php'); ?>
 
 
 	<body onload="getEstado();">
@@ -73,11 +26,14 @@
           <div class="input-field col s4 m12 l4" id="municipioList"></div>
           <div class="input-field col s4  m12 l4" id="rubroList"></div>
     </div>
-          <div class="input-field col s12  m12 l6" id="pasantiaList"></div>
+          <div class="row" id="pasantiaList"></div>
       </form>
       </div>
   </main>
-<?php require_once('includes/footer.php'); ?>          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<?php require_once('includes/footer.php'); ?>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
          <script type="text/javascript" src="css/materialize/js/materialize.min.js" ></script>
 
 

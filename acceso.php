@@ -19,7 +19,7 @@
   }
 
   footer.page-footer {
-    
+
     background-color: #931919;
 }
 nav {
@@ -62,15 +62,15 @@ nav {
   </nav>
 
 
-    
+
 
   <main class="container">
     <div>
     <div class="row">
-    
+
       <div class="col s12 m12 l12"> <h4 align="center">Pasantías <?php echo date('Y'); ?></h4> </div>
     </div>
-  
+
     <div id="login-page" class="row body">
     <div class="col s12 z-depth-4 card-panel">
       <form class="login-form" action="includes/login.php" method="POST">
@@ -83,7 +83,7 @@ nav {
         <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix"></i>
-            <input name="user" id="username" type="text" placeholder="Nombre de Usuario">  
+            <input name="user" id="username" type="text" placeholder="Nombre de Usuario">
           </div>
         </div>
         <div class="row margin">
@@ -92,7 +92,7 @@ nav {
             <input name="password" id="password" type="password" placeholder="Contraseña">
           </div>
         </div>
-        
+
             <div class="row">
                 <div class="input-field col s12">
                         <button class="btn waves-effect waves-light" type="submit" name="action">Acceder
@@ -105,28 +105,11 @@ nav {
     </div>
   </div>
       </div>
-               
+
   </main>
 
 
-<footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <a class="grey-text text-lighten-3" href="#!"><h5 class="white-text">Universidad Zamorano</h5>
-                <p class="grey-text text-lighten-4">Comprometidos a Alimentar el Mundo</p></a>
-              </div>
-              
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2016 Copyright CPA, Universidad Zamorano.
-           
-            </div>
-          </div>
-        </footer> 
+<?php require_once('includes/footer.php'); ?>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
          <script type="text/javascript" src="css/materialize/js/materialize.min.js" ></script>

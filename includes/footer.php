@@ -11,15 +11,14 @@
           <img class="imgfooter aligncenter" src="img/logo-pgrd.png" alt="" >
         </div>
         <div class="col l3 s12">
-          <h4 class="">Enlaces de interés</h4>
           <ul>
-          <?php if (!isset( $_SESSION['perfiles_user'] )) {?>
-                  <li><a class="" href="acceso.php">Log in</a></li>
-                <?php }elseif (isset( $_SESSION['perfiles_user'] )) {?>
-                  <li><a class="" href="includes/logout.php">Log out: <?php echo "Usuario: ".$_SESSION['perfiles_user']; ?></a></li>
-                  <li><a class="" href="busqueda-avanzada.php">Busqueda avanzada</a></li>
-                <?php } ?>
-            <li><a class="" href="https://www.zamorano.edu/mapa-del-sitio/">COPECO</a></li>
+          <?php if (!isset( $_SESSION['uid'] )) {?>
+            <li><a class="" href="acceso.php">Log in</a></li>
+          <?php }elseif (isset( $_SESSION['uid'] )) {?>
+            <li><a class="" href="logout.php">Log out</a></li>
+            <li><a class="" href="agregar-nuevo.php">Agregar Nueva Pasantía</a></li>
+          <?php } ?>
+          <li><a class="" href="https://www.zamorano.edu/mapa-del-sitio/">COPECO</a></li>
           <li><a class="" href="https://mail.zamorano.edu/owa/auth/logon.aspx?replaceCurrent=1&amp;url=https%3a%2f%2fmail.zamorano.edu%2fowa%2f">Situación Actual</a></li>
           <li><a class="" target="_blank" href="https://www.zamorano.edu/alisonbixby/">Estaciones Sismicas</a></li>
           <li><a class="" href="https://www.zamorano.edu/donar-en-linea/">Radar Meteorológico</a></li>
@@ -41,13 +40,13 @@
         <div class="col l3 s12">
           <h4 class="">Enlaces de interés</h4>
           <ul>
-          <?php if (!isset( $_SESSION['perfiles_user'] )) {?>
-                  <li><a class="" href="acceso.php">Log in</a></li>
-                <?php }elseif (isset( $_SESSION['perfiles_user'] )) {?>
-                  <li><a class="" href="includes/logout.php">Log out: <?php echo "Usuario: ".$_SESSION['perfiles_user']; ?></a></li>
-                  <li><a class="" href="busqueda-avanzada.php">Busqueda avanzada</a></li>
-                <?php } ?>
-            <li><a class="" href="https://www.zamorano.edu/mapa-del-sitio/">COPECO</a></li>
+          <?php if (!isset( $_SESSION['uid'] )) {?>
+            <li><a class="" href="acceso.php">Log in</a></li>
+          <?php }elseif (isset( $_SESSION['uid'] )) {?>
+            <li><a class="" href="logout.php">Log out</a></li>
+            <li><a class="" href="agregar-nuevo.php">Agregar Nueva Pasantía</a></li>
+          <?php } ?>
+          <li><a class="" href="https://www.zamorano.edu/mapa-del-sitio/">COPECO</a></li>
           <li><a class="" href="https://mail.zamorano.edu/owa/auth/logon.aspx?replaceCurrent=1&amp;url=https%3a%2f%2fmail.zamorano.edu%2fowa%2f">Situación Actual</a></li>
           <li><a class="" target="_blank" href="https://www.zamorano.edu/alisonbixby/">Estaciones Sismicas</a></li>
           <li><a class="" href="https://www.zamorano.edu/donar-en-linea/">Radar Meteorológico</a></li>
@@ -61,6 +60,5 @@
       <a>© <?php echo date('Y');?> All Rights Reserved</a> <a class="" href="http://www.copeco.gob.hn/">COPECO</a>.
       </div>
     </div>
-
           </div>
   </footer>
