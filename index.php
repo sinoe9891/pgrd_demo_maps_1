@@ -3,15 +3,7 @@
 	<?php require_once('includes/header.php'); ?>
 
 	<body onload="getEstado();">
-  <nav style="height: 150px">
-  <div class="container" >
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo center">
-      <img  src="img/logos-deptos-Blancos-10.png">
-      </a>
-    </div>
-    </div>
-  </nav>
+
 	<main class="container">
 		<div>
 			<div class="row">

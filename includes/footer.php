@@ -7,16 +7,17 @@
   </div>
     <div class="container">
       <div class="row">
-        <div class="col s12 m6 l3">
+        <div class="col l3 s12">
           <img class="imgfooter aligncenter" src="img/logo-pgrd.png" alt="" >
         </div>
         <div class="col l3 s12">
+          <h4 class="">Enlaces de interés</h4>
           <ul>
           <?php if (!isset( $_SESSION['uid'] )) {?>
-            <li><a class="" href="acceso.php">Log in</a></li>
+            <li><a class="" href="acceso.php">Iniciar Sesión</a></li>
           <?php }elseif (isset( $_SESSION['uid'] )) {?>
-            <li><a class="" href="logout.php">Log out</a></li>
-            <li><a class="" href="agregar-nuevo.php">Agregar Nueva Pasantía</a></li>
+            <li><a class="" href="logout.php">Cerrar Sesión</a></li>
+            <li><a class="" href="agregar-nuevo.php">Añadir nueva región</a></li>
           <?php } ?>
           <li><a class="" href="https://www.zamorano.edu/mapa-del-sitio/">COPECO</a></li>
           <li><a class="" href="https://mail.zamorano.edu/owa/auth/logon.aspx?replaceCurrent=1&amp;url=https%3a%2f%2fmail.zamorano.edu%2fowa%2f">Situación Actual</a></li>
@@ -40,12 +41,6 @@
         <div class="col l3 s12">
           <h4 class="">Enlaces de interés</h4>
           <ul>
-          <?php if (!isset( $_SESSION['uid'] )) {?>
-            <li><a class="" href="acceso.php">Log in</a></li>
-          <?php }elseif (isset( $_SESSION['uid'] )) {?>
-            <li><a class="" href="logout.php">Log out</a></li>
-            <li><a class="" href="agregar-nuevo.php">Agregar Nueva Pasantía</a></li>
-          <?php } ?>
           <li><a class="" href="https://www.zamorano.edu/mapa-del-sitio/">COPECO</a></li>
           <li><a class="" href="https://mail.zamorano.edu/owa/auth/logon.aspx?replaceCurrent=1&amp;url=https%3a%2f%2fmail.zamorano.edu%2fowa%2f">Situación Actual</a></li>
           <li><a class="" target="_blank" href="https://www.zamorano.edu/alisonbixby/">Estaciones Sismicas</a></li>

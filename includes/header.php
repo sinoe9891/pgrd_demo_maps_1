@@ -51,12 +51,10 @@
         .text-action {
           text-align: center;
               font-size: 110%;
-
         }
-
         /* NAV */
         nav {
-          background-color: #008341;
+          background-color: #ffffff;
         }
         section {
            float: left;
@@ -66,7 +64,6 @@
            float: right;
            width: 29.3680297%;
         }
-
         img {
             width:100%;
             max-width:1000px;
@@ -77,14 +74,12 @@
             display:block;
             margin:auto;
         }
-
         .aligncenter img {
              display: center;
          }
          .image_frame .image_wrapper img, {
              transition: all .3s ease-in-out;
          }
-
     </style>
     <script src="includes/js.js" charset="utf-8"></script>
     <!-- Footer -->
@@ -117,3 +112,12 @@
     <meta name="google-site-verification" content="U3V_ROkyAiyC8ercZKwlvs_gvWWeCmlc87MfNxmhq_k">
     <meta name="yandex-verification" content="7f7e053daf9b0a85">
 </head>
+<nav style="height: 100px">
+<div class="container" >
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo center">
+    <img class="imgfooter aligncenter" src="img/logo-pgrd.png" alt="" >
+    </a>
+  </div>
+  </div>
+</nav>
