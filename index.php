@@ -36,13 +36,9 @@
 		</div>
 		</div>
 	</main>
-
-
 <?php require_once('includes/footer.php'); ?>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
          <script type="text/javascript" src="css/materialize/js/materialize.min.js" ></script>
-
-
 <script type="text/javascript">
   $(document).ready(function() {
     $('select').material_select();
