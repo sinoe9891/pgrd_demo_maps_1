@@ -23,15 +23,10 @@ if( !isset( $_SESSION['uid'] ) )
                 <span class="card-title">Agregar nuevo Proyecto </span>
                      <form method="POST" action="includes/new/nuevaPasantia.php" enctype="multipart/form-data" >
                         <div id="paisList"></div>
-
                         <div id="empresaList"></div>
-
                         <div id="atlist"></div>
-
                         <div id="rubroList"></div>
-
                         <div id="cultivoList"></div>
-
                          <div id="buttonnew"></div>
                        </form>
                  </div>

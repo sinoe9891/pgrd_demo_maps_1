@@ -3,7 +3,6 @@
 	<?php require_once('includes/header.php'); ?>
 
 	<body onload="getEstado();">
-
 	<main class="container">
 		<div>
 			<div class="row">

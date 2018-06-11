@@ -112,11 +112,11 @@
     <meta name="google-site-verification" content="U3V_ROkyAiyC8ercZKwlvs_gvWWeCmlc87MfNxmhq_k">
     <meta name="yandex-verification" content="7f7e053daf9b0a85">
 </head>
-<nav style="height: 100px">
+<nav style="height: 150px">
 <div class="container" >
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo center">
-    <img class="imgfooter aligncenter" src="img/logo-pgrd.png" alt="" >
+    <a href="#!" class="brand-logo center" style="position:absolute">
+    <img class="imgfooter aligncenter" src="img/pgrd.png" alt="" >
     </a>
   </div>
   </div>
