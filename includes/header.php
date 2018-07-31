@@ -112,7 +112,7 @@
     <meta name="google-site-verification" content="U3V_ROkyAiyC8ercZKwlvs_gvWWeCmlc87MfNxmhq_k">
     <meta name="yandex-verification" content="7f7e053daf9b0a85">
 </head>
-<nav style="height: 150px">
+<nav style="height: 120px">
 <div class="container" >
   <div class="nav-wrapper">
     <a href="#!" class="brand-logo center" style="position:absolute">

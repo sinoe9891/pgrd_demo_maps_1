@@ -23,7 +23,7 @@ if ($id_areaTematica==1) {
             <div class="card-content ">
               <span class="card-title">Registro Número: <?php echo $row['pst-doc-id']; ?></span>
 								<p>Nombre de Región: <?php echo $row['pais-nom']; ?></p>
-								<p>Departamento: <?php  if($row['rb-at']==1){echo 'Fitotecnia';}elseif($row['rb-at']==2){echo "Zootecnia";}?></p>
+								<p>Municipio: <?php  if($row['rb-at']==1){echo 'El Progreso';}elseif($row['rb-at']==2){echo "Zootecnia";}?></p>
 								<p>Rubro: <?php echo $row['rb-nom']." (". $row['rd-dsc'].")" ; ?></p>
 								<p>Cultivo: <?php echo $row['ctv-nom']; ?></p>
 								<p>Empresa: <?php echo $row['emp-nom']; ?></p>

@@ -180,8 +180,6 @@ function insertCultivos($value){
 
 	}
 
-
-
 	function selectCultivo($value,$empresa_id,$pais_id,$rubro_id){
 		GLOBAL $mysqli;
 		$selectCultivo="SELECT `id-emp`, `id-cv`, `id-pais`, `pst-id-rb` FROM `pst-inter-emp-cv` WHERE `id-emp` = ".$empresa_id." AND `id-cv` = ".$value." AND `id-pais` = ".$pais_id." AND `pst-id-rb` = ".$rubro_id;

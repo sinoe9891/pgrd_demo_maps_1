@@ -14,14 +14,12 @@
 	if($resultado=$mysqli->query($query))
 	{
 		?>
-		<option value="" >Seleccione una Región</option>
-
+		<option value="" >Área Cobertura Región 1 PGRD-COPECO</option>
 		<?php
 		while($row = $resultado->fetch_assoc())
 		{
 		?>
 		<option value="<?php echo $row['pais-id']; ?>"><?php echo $row['pais-nom']; ?></option></div>
-
 		<?php
 		}
 	}
